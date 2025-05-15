@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css">
+   <script src="index.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -45,10 +46,13 @@
 <section id="search">
     
    <div class="main-wrapper">
-   <h2 class="search-info">Movies</h2>
+   <h2 class="search-info">Action/Adventure</h2>
    <h3 class="price-filter">
-   <span class="black-txt">Filter:</span> {add sytle filter}
-</h2>
+<select class="black-txt" id="filter">
+    <option value="" disabled selected>Filter</option>
+    <option value="Action/Adventure">Action/Adventure</option>
+    <option value="Family">Family</option>
+</select>
 </div>
 <div class="movies">
     <div class="movie-wrapper">
@@ -62,7 +66,7 @@
            <figure>
             <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BNjk4OTczOTk0NF5BMl5BanBnXkFtZTcwNjQ0NzMzMw@@._V1_SX300.jpg" alt="">
         </figure> 
-               <h4 class="movie__title">Transformers: Revenge of the fallen</h4>
+               <h4 class="movie__title">Transformers: Revenge of the Fallen</h4>
         </div>
         <div class="movie">
             <figure>

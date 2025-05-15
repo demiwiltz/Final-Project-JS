@@ -144,7 +144,7 @@ align-items: center;
 z-index: 1005;
 }
 
-.nav__links {
+.nav__link {
     position: relative;
 }
 
@@ -163,11 +163,8 @@ z-index: 1005;
 .nav-bar .nav__link:hover:after {
     width: 100%;
     left: 0;
-
   background-color: #fff;
 }
-
-
 
 
 .content-wrapper {
@@ -184,7 +181,8 @@ z-index: 2;
 
 /* CONTENT */
 
-    /* margin-bottom: 12px;
+    /* was for the h2: 
+    margin-bottom: 12px;
     color: #6030b1;
     font-size: 20px; */
 
@@ -221,10 +219,15 @@ font-size: 30px;
 }
 
 .movie {
-    width: 25%;
+    width: calc(100% / 3);
 }
 
-
+.movies {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 30px;
+}
 
 
 
