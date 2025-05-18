@@ -6,160 +6,78 @@
 
 // E - Commerce App Video {16:10} $$$$$$$$$$$$$$
 
-function renderMovies(filter) {
-  const movieWrapper = document.querySelector(".movie"); 
+function renderMovies() {
+const movieWrapper = document.querySelector('.movies')
 
- const movies = getMovies();
+const movies = getMovies()
+console.log(movies)
 
- if(filter === 'Action/Adventure') {
- console.log(filter)
-const filteredMovies = movies.sort((a, b) => a.categoryId - b.categoryId);
-console.log(filteredMovies)
+movieWrapper.innerHTML = 
+`<div class="movies">
+<div class="movie-wrapper">
+    <div class="movie">
+        <figure>
+        <img class="movie__img" src="${movies.Poster}" alt="">
+        </figure> 
+                <h4 class="movie__title">"${movies.Title}"</h4>
+    </div>`
 }
-
-const moviesHtml = movies.map((movie) => {
-  return `<div class="movie">
-    <figure>
-    <img class="movie__img" src="${movie.poster}" alt="">
-    </figure> 
-    <h4 class="${movie.title}">${movie.title}</h4>
-</div>`;
-}).join("");
-
-movieWrapper.innerHTML = moviesHtml
-}
-
-
-
-function filterMovies(event) {
-  renderMovies(event.target.value)
-}
-
-
-
 setTimeout(() => {
   renderMovies();
-}, 2000);
+}, 2000)
+
+
+
+
 
 // FAKE DATA
 function getMovies() {
   return [
-    {
-      id: 1,
-      title: "Transformers",
-      year: "2007",
-      type: "movie",
-      categoryId: "Action/Adventure",
-      poster:
-        "https://m.media-amazon.com/images/M/MV5BZjM3ZDA2YmItMzhiMi00ZGI3LTg3ZGQtOTk3Nzk0MDY0ZDZhXkEyXkFqcGc@._V1_SX300.jpg",
-    },
-    {
-      id: 2,
-      title: "Transformers: Revenge of the Fallen",
-      year: "2009",
-      type: "movie",
-      categoryId: "Action/Adventure",
-      poster:
-        "https://m.media-amazon.com/images/M/MV5BNjk4OTczOTk0NF5BMl5BanBnXkFtZTcwNjQ0NzMzMw@@._V1_SX300.jpg",
-    },
-    {
-      id: 3,
-      title: "Transformers: Age of Extinction",
-      year: "2014",
-      type: "movie",
-      categoryId: "Action/Adventure",
-      poster:
-        "https://m.media-amazon.com/images/M/MV5BMjEwNTg1MTA5Nl5BMl5BanBnXkFtZTgwOTg2OTM4MTE@._V1_SX300.jpg",
-    },
-    {
-      id: 4,
-      title: "Kong: Skull Island",
-      year: "2017",
-      type: "movie",
-      categoryId: "Action/Adventure",
-      poster:
-        "https://m.media-amazon.com/images/M/MV5BMTcwMjcxYTQtYjJlOS00YTE1LWIyZGYtOGRlOTBlMWZmYTliXkEyXkFqcGc@._V1_SX300.jpg",
-    },
-    {
-      id: 5,
-      title: "Red Notice",
-      year: "2021",
-      type: "movie",
-      categoryId: "Action/Adventure",
-      poster:
-        "https://m.media-amazon.com/images/M/MV5BOGNjNGQ3MmItYTM5NS00NjBiLWI0ZTItZDE5ZjQyNjg3ODBjXkEyXkFqcGc@._V1_SX300.jpg",
-    },
-    {
-      id: 6,
-      title: "The Gray Man",
-      year: "2022",
-      type: "movie",
-      categoryId: "Action/Adventure",
-      poster:
-        "https://m.media-amazon.com/images/M/MV5BZmFhZTNlNzctZGQzZi00MTA3LThiNjMtYWQzNjUzMjNjZjA3XkEyXkFqcGc@._V1_SX300.jpg",
-    },
-  ];
+{
+Title: "Transformers",
+Year: "2007",
+imdbID: "tt0418279",
+Type: "movie",
+Poster: "https://m.media-amazon.com/images/M/MV5BZjM3ZDA2YmItMzhiMi00ZGI3LTg3ZGQtOTk3Nzk0MDY0ZDZhXkEyXkFqcGc@._V1_SX300.jpg"
+},
+{
+Title: "Transformers: Dark of the Moon",
+Year: "2011",
+imdbID: "tt1399103",
+Type: "movie",
+Poster: "https://m.media-amazon.com/images/M/MV5BMTkwOTY0MTc1NV5BMl5BanBnXkFtZTcwMDQwNjA2NQ@@._V1_SX300.jpg"
+},
+{
+Title: "Transformers: Revenge of the Fallen",
+Year: "2009",
+imdbID: "tt1055369",
+Type: "movie",
+Poster: "https://m.media-amazon.com/images/M/MV5BNjk4OTczOTk0NF5BMl5BanBnXkFtZTcwNjQ0NzMzMw@@._V1_SX300.jpg"
+},
+{
+Title: "Transformers: Age of Extinction",
+Year: "2014",
+imdbID: "tt2109248",
+Type: "movie",
+Poster: "https://m.media-amazon.com/images/M/MV5BMjEwNTg1MTA5Nl5BMl5BanBnXkFtZTgwOTg2OTM4MTE@._V1_SX300.jpg"
+},
+{
+Title: "Transformers: The Last Knight",
+Year: "2017",
+imdbID: "tt3371366",
+Type: "movie",
+Poster: "https://m.media-amazon.com/images/M/MV5BYWNlNjU3ZTItYTY3Mi00YTU1LTk4NjQtYjQ3MjFiNjcyODliXkEyXkFqcGc@._V1_SX300.jpg"
+},
+{
+Title: "Transformers: Rise of the Beasts",
+Year: "2023",
+imdbID: "tt5090568",
+Type: "movie",
+Poster: "https://m.media-amazon.com/images/M/MV5BZTVkZWY5MmItYjY3OS00OWY3LTg2NWEtOWE1NmQ4NGMwZGNlXkEyXkFqcGc@._V1_SX300.jpg"
+},
+];
 }
 
-// FAKE DATA
-// function getKidsMovies() {
-//   return [
-//     {
-//       id: 1,
-//       title: "Toy Story",
-//       year: "1995",
-//       type: "movie",
-//       categoryId: "Family",
-//       poster:
-//         "https://m.media-amazon.com/images/M/MV5BZTA3OWVjOWItNjE1NS00NzZiLWE1MjgtZDZhMWI1ZTlkNzYwXkEyXkFqcGc@._V1_SX300.jpg",
-//     },
-//     {
-//       id: 2,
-//       title: "Toy Story 2",
-//       year: "1999",
-//       type: "movie",
-//       categoryId: "Family",
-//       poster:
-//          "https://m.media-amazon.com/images/M/MV5BNzVmODlhMDEtY2YxZi00OTVjLTlkNTktN2Q2OTRlM2I4M2FhXkEyXkFqcGc@._V1_SX300.jpg",
-//     },
-//     {
-//       id: 3,
-//       title: "Toy Story 3",
-//       year: "2010",
-//       type: "movie",
-//       categoryId: "Family",
-//       poster:
-//         "https://m.media-amazon.com/images/M/MV5BMTgxOTY4Mjc0MF5BMl5BanBnXkFtZTcwNTA4MDQyMw@@._V1_SX300.jpg",
-//     },
-//     {
-//       id: 4,
-//       title: "Despicable Me",
-//       year: "2010",
-//       type: "movie",
-//       categoryId: "Family",
-//       poster:
-//         "https://m.media-amazon.com/images/M/MV5BMTY3NjY0MTQ0Nl5BMl5BanBnXkFtZTcwMzQ2MTc0Mw@@._V1_SX300.jpg",
-//     },
-//     {
-//       id: 5,
-//       title: "Kung Fu Panda",
-//       year: "2008",
-//       type: "movie",
-//       categoryId: "Family",
-//       poster:
-//        "https://m.media-amazon.com/images/M/MV5BZDU5MDNiMGItYjVmZi00NDUxLTg2OTktNGE0NzNlNzM4NzgyXkEyXkFqcGc@._V1_SX300.jpg",
-//     },
-//     {
-//       id: 6,
-//       title: "Ice Age",
-//       year: "2002",
-//       type: "movie",
-//       categoryId: "Family",
-//       poster:
-//        "https://m.media-amazon.com/images/M/MV5BMDBlYzU2OGMtOGJjNi00ZGZjLWIwNjMtYzdiZjkwYWNjZDljXkEyXkFqcGc@._V1_SX300.jpg",
-// //     },
-//   ];
-// }
 
 
 
