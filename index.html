@@ -30,8 +30,8 @@
     <div class="content-wrapper">
         <h1>Browse our movies</h1>  
     <div class="input-wrap">
-<input type="text" placeholder="Search">
-<div class="search-wrapper">
+<input type="text" id="searchBar" placeholder="Search">
+<div class="search-wrapper" id="searchButton">
     <i class="fa-solid fa-magnifying-glass"></i>
 </div>
 </div>
@@ -54,93 +54,20 @@
     <option value="Family">Family</option>
 </select>
 </div>
-<div class="movies">
-<div class="movie-wrapper">
+
+<div class="movies movies__loading ">
+                    <i class="fas fa-spinner movies__loading--spinner"></i>
+                </div>
+ <!-- <div class="movie-wrapper">
     <div class="movie">
         <figure>
         <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BZjM3ZDA2YmItMzhiMi00ZGI3LTg3ZGQtOTk3Nzk0MDY0ZDZhXkEyXkFqcGc@._V1_SX300.jpg" alt="">
         </figure> 
-                <h4 class="movie__title">Transformers</h4>
-        </div>
-
+                <h4 class="movie__title">Transformers</h4> -->
+        </div> 
     </div>
 </div>
 </section>
 </main>
 </body>
 </html>
-
-
-
-
-
-
-
-        <!-- <div class="movie">
-           <figure>
-            <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BNjk4OTczOTk0NF5BMl5BanBnXkFtZTcwNjQ0NzMzMw@@._V1_SX300.jpg" alt="">
-        </figure> 
-               <h4 class="movie__title">Transformers: Revenge of the Fallen</h4>
-        </div>
-        <div class="movie">
-            <figure>
-            <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BMjEwNTg1MTA5Nl5BMl5BanBnXkFtZTgwOTg2OTM4MTE@._V1_SX300.jpg" alt="">
-        </figure>
-        <h4 class="movie__title">Transformers: Age of Extinction</h4>
-        </div>
-        <div class="movie">
-          <figure>
-            <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BMTcwMjcxYTQtYjJlOS00YTE1LWIyZGYtOGRlOTBlMWZmYTliXkEyXkFqcGc@._V1_SX300.jpg" alt="">
-        </figure>  
-               <h4 class="movie__title">Kong Skull Island</h4>
-        </div>
-        <div class="movie">
-            <figure>
-                <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BOGNjNGQ3MmItYTM5NS00NjBiLWI0ZTItZDE5ZjQyNjg3ODBjXkEyXkFqcGc@._V1_SX300.jpg" alt="">
-            </figure>
-                   <h4 class="movie__title">Red Notice</h4>
-        </div>
-        <div class="movie">
-            <figure>
-                <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BZmFhZTNlNzctZGQzZi00MTA3LThiNjMtYWQzNjUzMjNjZjA3XkEyXkFqcGc@._V1_SX300.jpg" alt="">
-            </figure>
-                   <h4 class="movie__title">The Gray Man</h4>
-        </div> -->
-            <!-- <select id="filter" onchange="filterFamily(event)"> -->
-<!-- !!!!!!!!KIDS MOVIES!!!!!!!!! -->
-                <!-- <div class="movie">
-            <figure>
-                <img src="https://m.media-amazon.com/images/M/MV5BZTA3OWVjOWItNjE1NS00NzZiLWE1MjgtZDZhMWI1ZTlkNzYwXkEyXkFqcGc@._V1_SX300.jpg" alt="">
-            </figure>
-            <h4 class="movie__title">Toy Story</h4>
-        </div>
-        <div class="movie">
-            <figure>
-                <img src="https://m.media-amazon.com/images/M/MV5BNzVmODlhMDEtY2YxZi00OTVjLTlkNTktN2Q2OTRlM2I4M2FhXkEyXkFqcGc@._V1_SX300.jpg" alt="">
-            </figure>
-            <h4 class="movie__title">Toy Story 2</h4>
-        </div>
-        <div class="movie">
-            <figure>
-                <img src="https://m.media-amazon.com/images/M/MV5BMTgxOTY4Mjc0MF5BMl5BanBnXkFtZTcwNTA4MDQyMw@@._V1_SX300.jpg" alt="">
-            </figure>
-            <h4 class="movie__title">Toy Story 3</h4>
-        </div>
-        <div class="movie">
-            <figure>
-                <img src="https://m.media-amazon.com/images/M/MV5BMTY3NjY0MTQ0Nl5BMl5BanBnXkFtZTcwMzQ2MTc0Mw@@._V1_SX300.jpg" alt="">
-            </figure>
-            <h4 class="movie__title">Despicable Me</h4>
-        </div>
-        <div class="movie">
-            <figure>
-                <img src="https://m.media-amazon.com/images/M/MV5BZDU5MDNiMGItYjVmZi00NDUxLTg2OTktNGE0NzNlNzM4NzgyXkEyXkFqcGc@._V1_SX300.jpg" alt="">
-            </figure>
-            <h4 class="movie__title">Kung Fu Panda</h4>
-        </div>
-        <div class="movie">
-            <figure>
-                <img src= "https://m.media-amazon.com/images/M/MV5BMDBlYzU2OGMtOGJjNi00ZGZjLWIwNjMtYzdiZjkwYWNjZDljXkEyXkFqcGc@._V1_SX300.jpg" alt="">
-            </figure>
-            <h4 class="movie__title">Ice Age</h4>
-        </div> -->
