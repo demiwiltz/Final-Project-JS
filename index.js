@@ -7,45 +7,87 @@
 // E - Commerce App Video {16:10} $$$$$$$$$$$$$$
 let movies;
 
-document.getElementById('searchButton').addEventListener('click', renderMovies)
+document.getElementById('searchButton').addEventListener('click', renderMovies);
 
 async function renderMovies() {
-const query = document.getElementById('searchBar').value
-const apiUrl = `https://www.omdbapi.com/?apikey=79bfa222&s=transformers${query}`;
+const query = document.getElementById('searchBar').value;
+// const apiUrl = `https://www.omdbapi.com/?apikey=79bfa222&s=transformers${query}`;
 
-const searchList = await fetch('https://www.omdbapi.com/?apikey=79bfa222&s=transformers')
-const movieList = await searchList.json()
-console.log(movieList)
+// const searchList = await fetch(apiUrl)
+// const movieList = await searchList.json()
+// console.log(movieList)
 
 const movieWrapper = document.querySelector(".movies");
+// movieWrapper.classList += ' movies__loading'
+movieWrapper.innerHTML = `<i class="fas fa-spinner movies__loading--spinner"></i>`
+movieWrapper.classList.add('movies__loading')
+
+try {
+  const searchList = await fetch(`https://www.omdbapi.com/?apikey=79bfa222&s=transformers${query}`)
+  const movieList = await searchList.json() 
+
+if(movieList.Response === "True" && movieList.Search) {
+  movies = movieList.Search
+  console.log(movies)
 
 
-movieWrapper.classList += ' movies__loading'
+const movieHtml = movies
+                .map((movie) => { // Renamed parameter from 'movies' to 'movie' for clarity
+                    return `<div class="movie">
+                        <figure>
+                            <img class="movie__img" src="${movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/150'}" alt="${movie.Title}">
+                        </figure>
+                        <h4 class="movie__title">${movie.Title}</h4>
+                    </div>`;
+                })
+                .join("");
+            movieWrapper.innerHTML = movieHtml;
+            console.log(movieHtml);
+              } else {
+            movieWrapper.innerHTML = `<p>No movies found for "${query}". Please try a different search term.</p>`;
+            console.warn(`OMDb API Error: ${movieList.Error || 'Unknown error'}`);
+              }
+            } catch (error) {
+        console.error("Error fetching movies:", error);
+        movieWrapper.innerHTML = `<p>An error occurred while fetching movies. Please try again.</p>`;
+        } finally {
+        movieWrapper.classList.remove('movies__loading'); // Remove loading class regardless of success or failure
+    }
+  }
+  
 
-if(!movies) {
-movies = await getMovies();
-}
+renderMovies()
 
-movieWrapper.classList.remove('movies__loading')
+
+
+
+
+
+
+// if(!movies) {
+// movies = await getMovies();
+// }
+
+// movieWrapper.classList.remove('movies__loading')
 // console.log(movies);
 
-  const movieHtml = movies
-    .map((movies) => {
-      return `<div class="movie">
-        <figure>
-        <img class="movie__img" src="${movies.Poster}" alt="">
-        </figure> 
-                <h4 class="movie__title">${movies.Title}</h4>
-    </div>`;
-    })
-    .join("");
-  movieWrapper.innerHTML = movieHtml;
-  console.log(movieHtml);
-}
+//   const movieHtml = movies
+//     .map((movies) => {
+//       return `<div class="movie">
+//         <figure>
+//         <img class="movie__img" src="${movies.Poster}" alt="">
+//         </figure> 
+//                 <h4 class="movie__title">${movies.Title}</h4>
+//     </div>`;
+//     })
+//     .join("");
+  // movieWrapper.innerHTML = movieHtml;
+  // console.log(movieHtml);
+// }
 
-setTimeout(() => {
-  renderMovies();
-}, 2000);
+// setTimeout(() => {
+//   renderMovies();
+// }, 2000);
 
 
 
