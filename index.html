@@ -12,8 +12,12 @@
   <header>
         <div class="nav__row">
             <div class="nav-bar">
-               <div class="nav__logo">
-                    <img data-v-390ceb07="" src="/img/whitelogo.39850b27.png" alt="blinker logo" class="logo">
+               <div class="nav__logo"> 
+                    <img data-v-390ceb07="" src="https://images.unsplash.com/photo-1649011402576-a7bc591b8f85?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="blinker logo" class="logo">
+            <div>
+            <h1>Panda</h1>
+            <h1>Productions</h1>
+            </div>
                 </div>
             <ul class="nav__links">
             <li class="nav__link">
@@ -28,10 +32,10 @@
         </ul>
     </div>
     <div class="content-wrapper">
-        <h1>Browse our movies</h1>  
+        <h2>Browse our movies</h2>  
     <div class="input-wrap">
-<input type="text" id="searchBar" placeholder="Search">
-<div class="search-wrapper" id="searchButton">
+<input type="text" onchange="searchChange(event)" placeholder="Search">
+<div class="search-wrapper" >
     <i class="fa-solid fa-magnifying-glass"></i>
 </div>
 </div>
@@ -58,13 +62,7 @@
 <div class="movies movies__loading ">
                     <i class="fas fa-spinner movies__loading--spinner"></i>
                 </div>
- <!-- <div class="movie-wrapper">
-    <div class="movie">
-        <figure>
-        <img class="movie__img" src="https://m.media-amazon.com/images/M/MV5BZjM3ZDA2YmItMzhiMi00ZGI3LTg3ZGQtOTk3Nzk0MDY0ZDZhXkEyXkFqcGc@._V1_SX300.jpg" alt="">
-        </figure> 
-                <h4 class="movie__title">Transformers</h4> -->
-        </div> 
+                
     </div>
 </div>
 </section>
