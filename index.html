@@ -3,21 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JS Final Project</title>
     <link rel="stylesheet" href="./styles.css">
    <script src="index.js" defer></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>
+  
+  <nav>
         <div class="nav__row">
-            <div class="nav-bar">
-               <div class="nav__logo"> 
-                    <img data-v-390ceb07="" src="https://images.unsplash.com/photo-1649011402576-a7bc591b8f85?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="blinker logo" class="logo">
-            <div>
-            <h1>Panda</h1>
-            <h1>Productions</h1>
-            </div>
+<!-- BTN SHOWS -->
+     <button class="btn__menu" onclick="openMenu()">
+  <i class="fas fa-bars"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+              <i class="fas fa-times"></i>
+            </button>
+            <ul class="menu__links">
+              <li class="menu__list">
+                <a href="#" class="menu__link">Home</a>
+              </li>
+              <li class="menu__list">
+                <a href="#" class="menu__link no-cursor">Movies</a>
+              </li>
+              <li class="menu__list">
+                <a href="#" class="menu__link no-cursor">Tv Shows</a>
+              </li>
+            </ul>
                 </div>
             <ul class="nav__links">
             <li class="nav__link">
@@ -30,6 +43,14 @@
           <a href="#tvshows">Tv Shows</a>
             </li>
         </ul>
+            <div class="nav-bar">
+               <div class="nav__logo"> 
+                    <img data-v-390ceb07="" src="https://images.unsplash.com/photo-1649011402576-a7bc591b8f85?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="blinker logo" class="logo">
+                    <div>
+            <h1>Panda</h1>
+            <h1>Productions</h1>
+            </div>
+          </div>
     </div>
     <div class="content-wrapper">
         <h2>Browse our movies</h2>  
@@ -40,11 +61,12 @@
 </div>
 </div>
 </div>
+</div>
 <div class="overlay">
 </div>
 </div>
 <div class="progress-bar"></div>
-</header>
+</nav>
 
 <main>
 <section id="search">

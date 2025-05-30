@@ -27,6 +27,15 @@ async function renderMovies(searchTerm) {
 }
 
 
+function openMenu() {
+  document.body.classList += " menu--open"
+}
+
+function closeMenu() {
+document.body.classList.remove('menu--open')
+}
+
+
 // FAKE DATA
 function getMovies() {
   return new Promise((resolve) => {
