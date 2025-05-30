@@ -20,6 +20,7 @@ h1 {
     letter-spacing: .1em;
     max-width: 1000px;
     font-weight: 500;
+    font-size: 20px;
     color: #fff;   
 }
 
@@ -66,11 +67,12 @@ max-width: 430px;
 }
 
 .nav__row {
-    display: flex;
-flex-direction: column;    
-height: 326px;
+    /* display: flex;
+justify-content: space-between;
+align-items: center; */
+height: 200px;
     padding: 20px 15px;
-    background-color: grey;
+    /* background-color: grey; */
     position: relative;
     z-index: 10;
 }
@@ -105,11 +107,13 @@ background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f
 
 .nav__link {
 margin-left: 30px;
+position: relative;
 }
 
 
 .nav__logo {
     display: flex;
+    align-items: center;
 }
 
 .logo {
@@ -151,11 +155,8 @@ align-items: center;
 z-index: 1005;
 }
 
-.nav__link {
-    position: relative;
-}
 
-.nav-bar .nav__link:after {
+ .nav__link:after {
     transition: all .25s cubic-bezier(.694,.048,.335,1);
     content: "";
     position: absolute;
@@ -167,21 +168,24 @@ z-index: 1005;
     z-index: 2;
 }
 
-.nav-bar .nav__link:hover:after {
+ .nav__link:hover:after {
     width: 100%;
     left: 0;
   background-color: #fff;
 }
 
 
+
 .content-wrapper {
     width: 100%;
     max-width: 1200px;
     margin-top: 20px;
-    padding-left: 200px;
+    margin: 0 auto;
+    /* padding-left: 100px; */
     display: flex;
  flex-direction: column;
 align-items: center;
+position: fixed;
 z-index: 2;
 }
 
@@ -192,12 +196,18 @@ LANDING
 
  */
 
+ .burger__btn {
+
+}
+
 .btn__menu {
  background-color: transparent;
  font-size: 40px;
  text-align: center;
  border: none;
  color: #fff;
+ position: fixed;
+ z-index: 2;
 }
 
 .menu__backdrop {
@@ -253,7 +263,38 @@ font-size: 30px;
 
 .progress-bar {
     border: 3px solid purple;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    z-index: 2;
+    /* width: 100%;
+    height: 100%;
+    position: absolute;
+    will-change: transform; */
 }
+
+
+
+
+.md-progress-bar {
+    /* height: 5px;
+    overflow: hidden;
+    position: relative;
+    transform: translateZ(0) scaleY(1);
+    transform-origin: center center;
+    transition: opacity .3s cubic-bezier(.4,0,.2,1), transform .4s cubic-bezier(.4,0,.2,1);
+    will-change: opacity, transform;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px; */
+}
+
 
 .main-wrapper {
     display: flex;
