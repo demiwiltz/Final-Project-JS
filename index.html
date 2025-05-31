@@ -1,95 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Final Project</title>
-    <link rel="stylesheet" href="./styles.css">
-   <script src="index.js" defer></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-
-<section>
-  <nav>
-        <div class="nav__row">
-             <div class="nav-bar">
-               <div class="nav__logo"> 
-                    <img data-v-390ceb07="" src="https://images.unsplash.com/photo-1649011402576-a7bc591b8f85?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="blinker logo" class="logo">
-                    <div>
-            <h1>Panda</h1>
-            <h1>Productions</h1>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="index.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body style="background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5298bac0-b8bf-4c80-af67-725c1272dbb0/dbse65i-93e9ce8a-2c76-43f3-ad5a-dffc39877ea5.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzUyOThiYWMwLWI4YmYtNGM4MC1hZjY3LTcyNWMxMjcyZGJiMFwvZGJzZTY1aS05M2U5Y2U4YS0yYzc2LTQzZjMtYWQ1YS1kZmZjMzk4NzdlYTUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ecWdcOwuv6opCTZkZRlHfH3O3rzGCWgyDn_iU8EGjQM);">
+    <div class="overlay"></div>
+    <nav>
+      <div class="nav__row">
+        <div class="nav-bar">
+          <div class="nav__logo">
+            <img
+              data-v-390ceb07=""
+              src="https://images.unsplash.com/photo-1649011402576-a7bc591b8f85?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="blinker logo"
+              class="logo"
+            />
+            <div>
+              <h1>Panda</h1>
+              <h1>Productions</h1>
             </div>
-           </div>
-<!-- BTN SHOWS -->
-            <ul class="nav__links">
-            <li class="nav__link">
-          <a href="#">Home</a>
-            </li>
-            <li class="nav__link">
-          <a href="#movies">Movies</a>
-            </li>
-            <li class="nav__link">
-          <a href="#tvshows">Tv Shows</a>
-            </li>
-         </ul>
           </div>
-           <button class="btn__menu" onclick="openMenu()">
-           <i class="fas fa-bars"></i>
+          <!-- BTN SHOWS -->
+          <ul class="nav__links">
+            <li class="nav__link">
+              <a href="#">Home</a>
+            </li>
+            <li class="nav__link">
+              <a href="#movies">Movies</a>
+            </li>
+            <li class="nav__link">
+              <a href="#tvshows">Tv Shows</a>
+            </li>
+          </ul>
+        </div>
+        <button class="btn__menu" onclick="openMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+            <i class="fas fa-times"></i>
           </button>
-          <div class="menu__backdrop">  </div>
-            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
-              <i class="fas fa-times"></i>
-            </button>
-            <ul class="menu__links">
-              <li class="menu__list">
-                <a href="#" class="menu__link">Home</a>
-              </li>
-              <li class="menu__list">
-                <a href="#" class="menu__link no-cursor">Movies</a>
-              </li>
-              <li class="menu__list">
-                <a href="#" class="menu__link no-cursor">Tv Shows</a>
-              </li>
-            </ul>
-        
-  </nav>
-  <header>
-    <div class="content-wrapper">
-        <h2>Browse our movies</h2>  
-    <div class="input-wrap">
-<input type="text" onchange="searchChange(event)" placeholder="Search">
-<div class="search-wrapper" >
-    <i class="fa-solid fa-magnifying-glass"></i>
-</div>
-</div>
-</div>
-<div class="overlay"></div>
-</div>
-</header>
-</section>
+          <ul class="menu__links">
+            <li class="menu__list">
+              <a href="#" class="menu__link">Home</a>
+            </li>
+            <li class="menu__list">
+              <a href="#" class="menu__link no-cursor">Movies</a>
+            </li>
+            <li class="menu__list">
+              <a href="#" class="menu__link no-cursor">Tv Shows</a>
+            </li>
+          </ul>
+        </div>
+        <div class="content-wrapper">
+          <h2>Browse our movies</h2>
+          <div class="input-wrap">
+            <input
+              type="text"
+              onchange="searchChange(event)"
+              placeholder="Search"
+            />
+            <div class="search-wrapper">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="progress-bar"></div>
+    <!-- OVERLAY??!! BODY TAG??!! -->
+    <main>
+      <section id="search">
+        <div class="main-wrapper">
+          <h2 class="search-info">Action/Adventure</h2>
+          <h3 class="price-filter"></h3>
+          <select id="filter" onchange="filterMovies(event)">
+            <option value="" disabled selected>Filter</option>
+            <option value="Action/Adventure">Action/Adventure</option>
+            <option value="Family">Family</option>
+          </select>
+        </div>
 
-
-<main>
-<section id="search">
-  <div class="progress-bar"></div>
-   <div class="main-wrapper">
-   <h2 class="search-info">Action/Adventure</h2>
-   <h3 class="price-filter">
-    <select id="filter" onchange="filterMovies(event)">
-    <option value="" disabled selected>Filter</option>
-    <option value="Action/Adventure">Action/Adventure</option>
-    <option value="Family">Family</option>
-</select>
-</div>
-
-<div class="movies movies__loading ">
-                    <i class="fas fa-spinner movies__loading--spinner"></i>
-                </div>
-                
-    </div>
-</div>
-</section>
-</main>
-</body>
+        <div class="movies movies__loading">
+          <i class="fas fa-spinner movies__loading--spinner"></i>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
